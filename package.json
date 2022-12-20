@@ -1,0 +1,28 @@
+{
+  "name": "my-local-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node ./bin/www",
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Murttaz/exsrpess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Murttaz/exsrpess/issues"
+  },
+  "homepage": "https://github.com/Murttaz/exsrpess#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "gentls": "^1.0.4"
+  }
+}
