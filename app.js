@@ -1,26 +1,13 @@
 const express = require('express');
 const app = express();
 const { resolve }= require('path');
+const router = require('./routing/router')
+const routerApi = require('./routing/api_user.routes')
 
-app.use(express.static(resolve('public')))
+app.use(express.static(resolve('public'),{index:false}));
 
-app.get('/users',(req,res)=>{
-    res.json({name:'coco'})
-})
+app.use(routerApi);
+app.use(router);
 
-app.get ('/index',(req,res)=>{
-    res.sendFile(resolve('public','index.html'))
-});
 
-app.get ('/contact',(req,res)=>{
-    res.sendFile(resolve('public','contact.html'))
-});
-
-app.get ('/services',(req,res)=>{
-    res.sendFile(resolve('public','services.html'))
-});
-
-app.get ('*',(req,res)=>{
-    res.sendFile(resolve('public','index.html'))
-});
 module.exports = app;
